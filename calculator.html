@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator-App</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <main>
+        <div class="left"><h6>9:17</h6></div>
+        <div class="right">
+           <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="aqua"><path d="m321-323-69-68q47-43 105.5-66T479-480q63 0 121.5 23T706-391l-68 68q-32-30-72.5-45.5T480-384q-45 0-86 15.5T321-323ZM83-560l-68-68q94-91 214-139.5T480-816q131 0 250.5 48.5T944-628l-68 68q-81-77-182.5-118.5T480-720q-112 0-214 41.5T83-560Zm119 118-68-67q70-67 159.5-103T480-648q97 0 186.5 35.5T826-510l-68 68q-57-54-128.5-82T480-552q-78 0-149.5 28T202-442Zm278 250q-30 0-51-21t-21-51q0-30 21-51t51-21q30 0 51 21t21 51q0 30-21 51t-51 21Z"/></svg>
+           <span>5G</span>
+           <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="aqua"><path d="M192-264q-40 0-68-28t-28-68v-240q0-40 28-68t68-28h513l-57 72H192q-10 0-17 7t-7 17v240q0 10 7 17t17 7h438l-14 72H192Zm504-36 26-132H588l180-228h36l-24 132h132L732-300h-36Zm-481-84v-192h395L458-384H215Z"/></svg> 
+        </div>
+        <nav>
+            <div class="inner1"></div>
+            <div class="inner2"></div>
+        </nav>
+        <div class="section1">
+            <p id="paragraph1"></p>
+        </div>
+        <div class="section2" id="section2">
+            
+        </div>
+        <div class="section3">
+            <button onclick="displayButton(this)" class="orangeButton">/</button>
+            <button onclick="displayButton(this)" class="orangeButton">X</button>
+            <button onclick="displayButton(this)" class="orangeButton">+</button>
+            <button onclick="displayButton(this)" class="orangeButton">-</button>
+            <button onclick="submitResult()" class="orangeButton">=</button>
+            <button onclick="displayButton(this)" class="inputButton">1</button>
+            <button onclick="displayButton(this)" class="inputButton">2</button>
+            <button onclick="displayButton(this)" class="inputButton">3</button>
+            <button onclick="calculatePercentage()" class="inputButton">%</button>
+            <button id="orangeButton" class="orangeButton" onclick="deleteButton()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m456-320 104-104 104 104 56-56-104-104 104-104-56-56-104 104-104-104-56 56 104 104-104 104 56 56Zm-96 160q-19 0-36-8.5T296-192L80-480l216-288q11-15 28-23.5t36-8.5h440q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H360ZM180-480l180 240h440v-480H360L180-480Zm400 0Z"/></svg></button>
+            <button onclick="displayButton(this)" class="inputButton">4</button>
+            <button onclick="displayButton(this)" class="inputButton">5</button>
+            <button onclick="displayButton(this)" class="inputButton">6</button>
+            <button onclick="displayButton(this)" class="inputButton">0</button>
+            <button onclick="clearAll()" class="orangeButton">AC</button>
+            <button onclick="displayButton(this)" class="inputButton">7</button>
+            <button onclick="displayButton(this)" class="inputButton">8</button>
+            <button onclick="displayButton(this)" class="inputButton">9</button>
+            <button onclick="displayButton(this)" class="inputButton">.</button>
+            <button onclick="displayButton(this)" class="orangeButton">+/-</button>
+        </div>
+    </main>
+</body>
+</html>
+
+<script>
+let firstParagraph = document.getElementById('paragraph1')
+let secondSection = document.getElementById('section2')
+let computation = ''
+
+function displayButton(clickedValue) {
+let data = clickedValue.innerHTML
+ if (data === 'X' ) {data = '*'}
+computation += data
+secondSection.innerHTML = computation
+}
+
+function clearAll() {
+    secondSection.innerHTML = ''
+    firstParagraph.innerHTML = ''
+    computation = ''
+}
+function calculatePercentage() {
+   firstParagraph.innerHTML = (secondSection.innerHTML * 0.1).toFixed(1)
+}
+function submitResult() {
+    try {
+        let answer = eval(computation)
+        firstParagraph.innerHTML = answer
+        computation = answer.toString() 
+
+    } catch (error) {
+        secondSection.innerHTML = 'Error'
+        computation = ''
+    }
+}
+function deleteButton() {
+    computation = computation.slice(0, -1)
+    secondSection.innerHTML = computation
+}
+
+
+
+
+</script>

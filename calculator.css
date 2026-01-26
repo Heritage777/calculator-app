@@ -1,0 +1,112 @@
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;}
+body{
+    background: linear-gradient(to right, rgb(255, 0, 0), aqua);
+    padding: 50px;
+}
+main{
+    width: 21%;
+    height: 80vh;
+    padding: 20px 0;
+    background-color: black;
+    border: double 4px aqua;
+    margin: auto;
+    border-radius: 40px;
+    position: relative;
+    display: flex; justify-content: flex-end; align-items: center; flex-direction: column; gap: 10px;
+}
+.left{
+    width: 20%;
+    height: 4%;
+    /* background-color: brown; */
+    position: absolute;
+    top: 6px;
+    left: 25px;
+}
+.right{
+    width: 30%;
+    height: 4%;
+    /* padding: 5px; */
+    /* background-color: brown; */
+    display: flex; justify-content: flex-end; align-items: center; gap: 3px;
+    position: absolute;
+    top: 6px;
+    right: 15px;
+}
+.right span{
+    font-size: 12px;
+    font-weight: 700;
+    color: aqua;
+}
+.left h6{
+    font-size: 14px;
+    font-weight: 700;
+    color: aqua;
+}
+nav{
+    width: 35%;
+    height: 5%;
+    background-color: aqua;
+    border-radius: 0 0 10px 10px;
+    margin: auto;
+    display: flex; justify-content: center; align-items: center; gap: 5px;
+    position: absolute;
+    top: 0;
+    left: 78px;
+}
+.inner1{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+}
+.inner2{
+    width: 40px;
+    height: 4px;
+    background-color: rgb(0, 0, 0);
+}
+.section1, .section2{
+    width: 90%;
+    height: 10%;
+    padding: 10px;
+    background-color: rgba(0, 255, 255, 0.214);
+    border: double 4px aqua;
+    border-radius: 15px;
+    color: aqua;
+    display: flex; justify-content: flex-end; align-items: center; flex-wrap: wrap; overflow: hidden;
+    font-size: 18px;
+    font-weight: 700;
+}
+.section1{
+    font-size: 20px;
+    color: aqua;
+}
+.section3{
+    width: 90%;
+    height: 55%;
+    /* background-color: rgb(106, 106, 9); */
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap;
+}
+.inputButton, .orangeButton{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: aqua;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 600;
+    display: flex; justify-content: center; align-items: center;
+}
+.inputButton:hover{
+    background-color: rgba(0, 255, 255, 0.274);
+    color: black;
+}
+.orangeButton{
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+.orangeButton:hover{
+    background-color: aqua;
+    color: black;
+}
