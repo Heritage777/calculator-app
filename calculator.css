@@ -67,14 +67,19 @@ nav{
 .section1, .section2{
     width: 90%;
     height: 10%;
-    padding: 10px;
+    /* padding: 10px; */
     background-color: rgba(0, 255, 255, 0.214);
     border: double 4px aqua;
     border-radius: 15px;
     color: aqua;
-    display: flex; justify-content: flex-end; align-items: center; flex-wrap: wrap; overflow: hidden;
+    display: flex; justify-content: center; align-items: center; flex-wrap: wrap; overflow: hidden; gap: 10px;
     font-size: 18px;
     font-weight: 700;
+}
+.section2{
+    border: none;
+    background-color: transparent;
+    display: flex; justify-content: space-between; align-items: center; padding: 0 10px;
 }
 .section1{
     font-size: 20px;
@@ -87,7 +92,7 @@ nav{
     display: flex; justify-content: space-between; align-items: center;
     flex-wrap: wrap;
 }
-.inputButton, .orangeButton{
+.inputButton, .orangeButton, .symbol{
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -109,4 +114,22 @@ nav{
 .orangeButton:hover{
     background-color: aqua;
     color: black;
+}
+
+
+.span1, .span2{
+    width: 40%;
+    height: 100%;
+    /* background-color: rgb(0, 30, 255); */
+    border-radius: 10px 0 0 10px;
+    border: double 4px aqua;
+    display: flex; justify-content: center; align-items: center;
+    }
+.span2{
+    border-radius: 0 10px 10px 0;
+}
+.operator{
+     width: 15%;
+    height: 100%;
+    background-color: rgb(255, 0, 247);
 }
