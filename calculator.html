@@ -68,8 +68,8 @@ function operator(symbol) {
 }
 
 function submit() {
-    let firstValue = Number(firstSpan.innerHTML)
-    let secondValue = Number(secondSpan.innerHTML)
+    let firstValue = +(firstSpan.innerHTML)
+    let secondValue = +(secondSpan.innerHTML)
     let result
     
     if (sign === '+') {
@@ -84,7 +84,7 @@ function submit() {
         alert('No operator selected')
         return
     }
-    firstSpan.innerHTML = Number(result)
+    firstSpan.innerHTML = +(result)
     secondSpan.innerHTML = ''
 }
 function deleteButton() {
